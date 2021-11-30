@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+ul li {
+  margin-right: 10px;
+}
+li a {
+  text-decoration: none;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.about {
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
