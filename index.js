@@ -3,39 +3,37 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
 	res.writeHead(200,{'Content-Type':'text/html'});
-
 	switch(req.url){
-		
 		// displaying Home page
 		case '/':	
 			fs.readFile('./views/index.html', (err, data) => {
-			if(err)
-			{
-				res.end('Error Page 404');
-			}
-			res.end(data);
+				if(err)
+				{
+					res.end('Error Page 404');
+				}
+				res.end(data);
 			})
 			break;
 
 		//displaying about page	
 		case '/about':
 			fs.readFile('./views/about.html', (err, data) => {
-			if(err)
-			{
-				res.end('Error Page 404');
-			}
-			res.end(data);
+				if(err)
+				{
+					res.end('Error Page 404');
+				}
+				res.end(data);
 			})
 			break;
 		
 		// displaying contact page
 		case '/contact':
 			fs.readFile('./views/contact-me.html', (err, data) => {
-			if(err)
-			{
-				res.end('Error Page 404');
-			}
-			res.end(data);
+				if(err)
+				{
+					res.end('Error Page 404');
+				}
+				res.end(data);
 			})
 			break;
 		
@@ -53,10 +51,10 @@ const server = http.createServer((req, res) => {
 		// handling error url's
 		default:
 			fs.readFile('./views/404.html', (err, data) => {
-			if(err){
-				res.end('Error Page 404');
-			}
-			res.end(data);
+				if(err){
+					res.end('Error Page 404');
+				}
+				res.end(data);
 			})
 			break;
 	}
