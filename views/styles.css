@@ -31,3 +31,10 @@ img {
   margin: auto;
   display: flex;
 }
+.error {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
